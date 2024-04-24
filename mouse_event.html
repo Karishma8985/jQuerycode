@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #box{
+            background: pink;
+            padding: 10px;
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jquery Mouse Events</h1>
+    <div id="box" class="test">
+        <h2>Test box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <script src="jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#box').click(function(){
+                // $('#box').css('background-color','green');
+                 //var a = $('#box').html();
+                 //console.log(a);
+            });
+            
+            $('#box').dblclick(function(){
+                $('#box').css('background-color','orange');
+                var a = $('#box').html();
+                console.log(a);
+           });
+
+           $('#box').contextmenu(function(){
+                 $('#box').css('background-color','blue');
+                var a = $('#box').html();
+                console.log(a);
+             });
+
+             $('#box').mouseenter(function(){
+                    $('#box').css('background-color','tan');
+                   var a = $('#box').html();
+                   console.log(a);
+            });
+
+            $('#box').mouseleave(function(){
+                $('#box').css('background-color','purple');
+               var a = $('#box').html();
+               console.log(a);
+            });
+
+        });
+    </script>
+</body>
+</html>

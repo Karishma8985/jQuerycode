@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events</title>
+</head>
+<body>
+    <h1>JQuery Get Methods</h1>
+    <form action=" " id="sform">
+        <label for="">Name</label>
+        <input type="text" id="sname"> <br><br>
+
+        <label for="">Class</label>
+        <input type="text" id="sclass"> <br><br>
+
+        <label for="">Country</label>
+        <select name="" id="scountry">
+            <option value="India">India</option>
+            <option value="Rassia">Rassia</option>
+            <option value="Japan">Japan</option>
+            <option value="Nepal">Nepal</option>
+            <option value="Myanmar">Myanmar</option>
+        </select>
+        <br><br><br>
+        <input type="Submit">
+    </form>
+    <script src="jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#sform').submit(function(){
+                var name = $('#sname').val();
+                var classname = $('#sclass').val();
+                var country = $('#scountry').val();
+
+                alert("Hello"+name+"class: "+classname+"country: "+country);
+            });
+        });
+    </script>
+</body>
+</html>

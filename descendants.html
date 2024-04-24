@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: arial;
+        }
+
+        #main-outer{
+            border: 2px solid purple;
+            background: lightcoral;
+            padding: 10px;
+        }
+
+        #outer{
+            border:2px solid rgb(50, 97, 199);
+            background: rgb(155, 165, 226);
+            padding: 10px;
+        }
+
+        #inner{
+            border:2px solid rgb(238, 111, 170);
+            background: rgb(219, 148, 192);
+            padding: 10px;
+            height: 50px;
+
+        }
+
+        #inner div{
+            border:2px solid rgb(250, 250, 210);
+            background: rgb(245, 158, 124);
+            padding: 10px;
+            margin: 5px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>JQuery Descendant Methods</h1>
+
+    <div id="main-outer">
+        <h2>Main Outer</h2>
+
+        <div id="outer" style="position:relative;">
+
+            <h2>Outer</h2>
+
+            <div id="inner">
+                <h2>Inner</h2>
+                <div>A</div>
+                <div>B</div>
+                <div id="child-c">C</div>
+                <div>D</div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // here child is selected using children() method..
+            $('#inner').children().css('background','blue');
+
+            $('#outer').children().css('background','red');
+            $('#inner').children('.test').css('background','orange');
+            
+            // to find the data
+            $('#inner').find('.test').css('background','crimson');
+            
+        });
+
+        // offset parents---> directly goes to the offset of the id or class
+        // target the only thing that is ude in position...
+        // closest method is use for by first selectors can be selected...
+    </script>
+</body>
+</html>

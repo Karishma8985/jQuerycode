@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #box{
+            padding: 10px;
+            border: 1px solid green;
+        }
+        
+        .boxbg{
+            background-color: violet;   
+        }
+    </style>
+</head>
+<body>
+    <h1> JQuery on() Methods</h1>
+
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, iusto.</p>
+    </div>
+    <br>
+    <button>Remove Event</button>
+
+    <script src="jquery-3.6.3.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#box").on({
+                "click":function(){
+                    $(this).css("background","orange");
+                },
+            "mouseover":function(){
+                $(this).css("background","pink");
+            },
+            "mouseout":function(){
+                $(this).css("background","lightblue");
+            }
+        });
+        $("button").click(function(){
+            $("#box").off("mouseover mouseout");
+        });
+    });
+    </script>
+</body>
+</html>

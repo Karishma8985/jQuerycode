@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            padding: 10px;
+            border: 2px solid purple;
+            background: purple;
+            height: 200px;
+        }
+        h2{
+            color:red;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>JQuery Event.which property</h1>
+    <div id="box"></div>
+    <br>
+    <input type="text" id="inputbox"> <br>
+    <h2> </h2>
+
+    <script src="jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#box').on("mouseover mouseout mousedown",function(){
+
+                //output will shown for box....when u do leftclick output: 1 when u do center click output: 2, when u do rightclick output: 3
+
+            $('h2').html(event.type +":"+event.which);
+            });
+
+            //output will shown for text....when u take input from keyboard... output: it will be in ascii form....keyboard key  A-Z   ASCII value...65 -90
+                                    //             0-9  48-57
+                    //             special char 32-47,58-64,91-96;                           
+                    
+            $('#inputbox').on("keydown",function(){
+                $('h2').html(event.type+ ":"+event.which);
+            });
+        });
+    </script>
+</body>
+</html>

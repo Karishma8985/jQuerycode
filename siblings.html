@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: arial;
+        }
+
+        #outer{
+            border:2px solid rgb(50, 97, 199);
+            background: rgb(155, 165, 226);
+            padding: 10px;
+        }
+
+        #inner{
+            border:2px solid rgb(238, 111, 170);
+            background: rgb(219, 148, 192);
+            padding: 10px;
+            height: 50px;
+
+        }
+
+        #inner div{
+            border:2px solid rgb(250, 250, 210);
+            background: rgb(245, 158, 124);
+            padding: 10px;
+            margin: 5px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>JQuery Sibling Methods</h1>
+
+    <div id="outer">
+
+            <h2>Outer</h2>
+
+            <div id="inner">
+                <h2>Inner</h2>
+                <div class="test">A</div>
+                <div>B</div>
+                <div id="child-c">C</div>
+                <div class="test">D</div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // without target siblings , all siblings r selected...
+            $('#child-c').siblings().css('background','blue');
+
+            // when we target ,, only that sibling is selected...
+           // $('#child-c').siblings('h2').css('background','red');
+
+            // next division is selected...
+            //$('#child-c').next().css('background','pink');
+
+            // previous is selected....
+            //$('#child-c').prev().css('background','red');
+
+            // nextall division is selected...
+            //$('#child-c').nextAll().css('background','pink');
+
+            // previousall is selected....
+            //$('#child-c').prevAll().css('background','red');
+
+            // nextUntil is work of from ---> to
+            // child-c  ----> .test , in between all the class or id is selected..
+
+            $('#child-c').nextUntil('.test').css('background','lightblue');
+
+            // previous is selected....
+            $('#child-c').prevUntil('.test').css('background','lightred');
+        });
+   </script>
+</body>
+</html>

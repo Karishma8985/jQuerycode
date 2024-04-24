@@ -1,0 +1,50 @@
+ <!-- this work outside of div tag -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: arial;
+        }
+        h1{
+            font-size: 25px;
+        }
+        #box{
+            background: lightseagreen;
+            padding: 10px;
+            border: 1px solid darkolivegreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>JQuery After and Before Methods</h1>
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, iure!</p>
+    </div>
+    
+    <br><br>
+
+    <button id="afterbutton">After</button>
+    <button id="beforebutton">Before</button>
+
+    <script src="jquery-3.6.3.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#afterbutton').click(function(){
+                $('#box').after("<h2>Payal  </h2><p> this is just a text</p>");
+            });
+
+            $('#beforebutton').click(function(){
+                $('#box').before("<h2>Payal Patel</h2>")
+            });
+
+        });
+    </script>
+ </body>
+</html>   

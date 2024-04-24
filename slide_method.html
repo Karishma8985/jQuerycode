@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #box{
+            background: lightgrey;
+            padding: 10px;
+            border: 2px solid lightsalmon;
+        }
+    </style>
+</head>
+<body>
+    <h1>JQuery FadeIn and FadeOut Method</h1>
+    <div id="box">
+        <h2>Text Box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, officia.</p>
+    </div>
+    <br>
+    <button id="slideUpbtn">slideUp</button>
+    <button id="slideDownbtn">slideDown</button>
+    <button id="slideTogglebtn">slideToggle</button>
+
+
+    <script src="jquery-3.6.3.min.js"></script>
+
+    <script>
+        
+        $(document).ready(function(){
+            // slide up method....
+            $('#slideUpbtn').click(function(){
+            $('#box').slideUp();
+            });
+            
+            // slide up method for slow effect
+            $('#slideUpbtn').click(function(){
+            $('#box').slideUp("slow");      // you can change a slow to fast.....
+            });
+
+            // slide up method using time.....3000 means 3 seconds
+            $('#slideUpbtn').click(function(){
+            $('#box').slideUp(3000);      
+            });
+
+            // slidedown method......
+            $('#slideDownbtn').click(function(){
+            $('#box').slideDown();
+            });
+
+            $('#slideDownbtn').click(function(){
+            $('#box').slideDown("slow");
+            });
+
+            $('#slideDownbtn').click(function(){
+            $('#box').slideDown(3000);
+            });
+
+            $('#slideTogglebtn').click(function(){
+                $('#box').slideToggle();
+           });      //all parameter are same as fadeIn fadeOut....
+                    // all method are written in camel case.....
+                    // camelcase means staring letter is in small case with middele name in caps...
+        });
+ </script>
+</body>
+</html>

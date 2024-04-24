@@ -1,0 +1,63 @@
+<!-- this is work in div tag -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: arial;
+        }
+        h1{
+            font-size: 25px;
+        }
+        #box{
+            background: lightseagreen;
+            padding: 10px;
+            border: 1px solid darkolivegreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>JQuery Append and Prepend Methods</h1>
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, iure!</p>
+    </div>
+    <ol>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+        <li>list item 4</li>
+        <li>list item 5</li>
+    </ol>
+    <br><br>
+
+    <button id="appendbutton">Append</button>
+    <button id="prependbutton">Prepend</button>
+
+    <script src="jquery-3.6.3.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#appendbutton').click(function(){
+                $('#box').append("<h2>Payal</h2>")
+            });
+
+            $('#prependbutton').click(function(){
+                $('#box').prepend("<h2>Payal Patel</h2>")
+            });
+
+            $('#appendbutton').click(function(){
+                $('ol').append("<li>List Item new </li>");
+            });
+
+            $('#prependbutton').click(function(){
+                $('ol').prepend("<li>List Item before </li>")
+            });
+        });
+    </script>
+ </body>
+</html>   

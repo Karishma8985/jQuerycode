@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: arial;
+       }
+       #test{
+        background: pink;
+        padding: 5px;
+       }
+       .red{
+        color:blue;
+       }
+    </style>
+</head>
+<body>
+    <h1>Jquery WrapAll() and WrapInner()</h1>    
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur, voluptates.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, pariatur.</p>
+    <br><br>
+
+    <button id="wrapAllbutton">WrapAll</button>
+    <button id="wrapInnerbutton">WrapInner</button>
+
+    <script src="jquery-3.6.3.min.js"></script>
+     <script>
+        $(document).ready(function(){
+            $('#wrapAllbutton').click(function(){
+                $('p').wrapAll("<div id='test'></div>");
+            });
+            $('#wrapInnerbutton').click(function(){
+                $('h1').wrapInner('<span class="red"></span>');
+            });
+        });
+
+     </script>
+
+</body>
+</html>

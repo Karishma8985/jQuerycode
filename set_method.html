@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text{
+            border: 2px solid black;
+            background-color: lightcoral;
+            padding: 10px;
+        }
+
+        .red{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jquery Set Methods</h1>
+    <div id="box" class="test">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum <span> dolor sit amet </span> consectetur adipisicing elit.</p><br><br>
+    
+    </div>
+    <button id="clickbutton">Set value</button>
+    <button id="htmlbutton">Set html value</button>
+
+    <button id="attrbutton">Set attr value</button>
+
+    
+    <!-- Script  start -->
+    <script src="jquery-3.6.3.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            // Example of text
+
+            $('#clickbutton').click(function(){
+                $('#box p').text("This <b> is new </b> paragraph");
+            });
+
+            // Example of
+             $('#htmlbutton').click(function(){
+              $('#box p').html("This <b> is new </b> paragraph.");
+            });
+
+            $('#attrbutton').click(function(){
+                 $('#box h2').attr("class","red");
+                    //      .attr("class","class name")       this is not a color name.....
+            });
+        });
+    </script>
+
+</body>
+</html>

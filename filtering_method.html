@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #first{
+            background: lightblue;
+            border: 2px solid blue;
+            padding: 10px;
+        }
+
+        #second{
+            background: lightgreen;
+            border: 2px solid green;
+            padding: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>JQuery Filtering Methods</h1>
+    <div id="first">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ad?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, eos.</p>
+    </div>
+
+    <ul>
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Grapes</li>
+    </ul>
+
+    <div id="second">
+        <p class="test">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, ducimus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, obcaecati!</p>
+    </div>
+    <script src="jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // first paragraph will be targeted....
+            $('p').first().css('background','crimson');
+
+            // last paragraph will be targeted....
+          $('p').last().css('background','yellow');
+
+            // last contain of list....
+  //          $('ul li').last().css('background','pink');
+
+            //eq() method is target that value ... you will pass in parametres....
+
+    ///        $('ul li').eq(2).css('background','brown');
+
+       //     $('p').filter('.test').css('background','green');
+
+         //   $('p').not('.test').css('background','lightgreen');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: lavenderblush;
+        }
+        #box{
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            border: 2px double red;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>JQuery Animated Method</h1>
+    <div id="box">Hello, how r you?</div>
+    <br>
+    <button id="animatebtn">Animation</button>
+
+    <script src="jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $('#animatebtn').click(function(){
+             $('#box').animate({         // css properties
+                       left:'250px',
+                        width:'300px',
+                        fontSize:'25px',
+                        borderWidth:'5px'
+                });
+            });
+            // another function will be in queue....
+
+            $('#animatebtn').click(function(){
+                $('#box').animate({left:'350px'});            // u can added multiple properties also.....
+                $('#box').animate({top:'350px'});
+                });
+            });
+
+            // another function will be use  with time and pop up alert function..
+            $('#animatebtn').click(function(){
+                $('#box').animate({left:'350px'},3000 ,function(){
+                    alert("box is moving");
+                });  // u can added multiple properties also.....
+                $('#box').animate({top:'350px'},3000,function(){
+                    alert("moving complete");
+                });
+        
+
+            // set speed for animation
+
+         $('#animatebtn').click(function(){
+            $('#box').animate({left:'150px',fontSize:'25px'},3000); // take css properties in { }
+          $('#box').animate({top:'150px',fontSize:'25px'},4000); 
+            });
+        });
+    </script>
+
+    
+</body>
+</html>

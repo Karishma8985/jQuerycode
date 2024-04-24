@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 10px;
+            border: 2px,solid coral;
+            background: lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <h1>JQuery Replace With() and ReplaceAll()</h1>
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem<span>ipsum dolor sit</span> amet.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, iste.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, iste.</p>
+
+    </div>
+    <br><br><button id="replacebutton">Replace</button>
+
+    <script src="jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //$('#replacebutton').click(function(){
+              //  $('#box p:first').replaceWith("<h3>This text is replace with p....</h3>");
+            //});
+
+            // so we can use <h3> tag  so it can be replace
+
+       //   $('#replacebutton').click(function(){
+         //       $('#box p:nth-child(3)').replaceWith("<h3>This text is replace with p....</h3>");
+         //  });
+
+         //   $('#replacebutton').click(function(){
+           //     $('#box p:nth-child(3)').replaceWith("This text is replace with p....");
+           // });
+
+            // replace all method
+          //  $('#replacebutton').click(function(){
+         // $("<h3>This text is replace with p....</h3>").replaceAll('#box p');
+  //           });
+
+            // replace perticular one paragraph
+
+      //      $('#replacebutton').click(function(){
+        //     $("<h3>This text is replace with p....</h3>").replaceAll('#box p:first');
+          //  });
+
+            $('#replacebutton').click(function(){
+                $("hello").replaceAll('#box p:first');
+            });
+        });
+    </script>    
+</body>
+</html>

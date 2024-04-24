@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #first{
+            background: lightblue;
+            border: 2px solid blue;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>JQuery has() and is() Methods</h1>
+    <div id="first">
+        <p>Lorem ipsum <b>dolor sit</b> amet consectetur adipisicing elit. Voluptas, ad?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, eos.</p>
+    </div>
+
+    <ul>
+        <li>Orange</li>
+        <li> <span> Apple </span></li>
+        <li>Banana</li>
+        <li>Grapes</li>
+    </ul>
+
+    <div id="test">
+        <p class="test">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, ducimus.</p>
+        <p>Lorem ipsum dolor<span class="test"> sit amet, consectetur adipisicing elit. Veniam, obcaecati!</span></p>
+    </div>
+    <script src="jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+       // <p class="test"> this is some text<\p>  to target the class, id that method is called is()..... is() method is always work on if(is()) condition.... its output is true or false....
+        //if($('p').parent().is('div')){                    alert($('p').parent().is('div'));}
+
+            $('p').click(function(){
+
+                if($(this).parent().is('div')){ 
+                    $(this).css('background','crimson');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

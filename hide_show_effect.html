@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: arial;
+        }
+        #box{
+            border: 2px solid salmon;
+            padding: 10px;
+            background-color: steelblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>JQuery hide and show method</h1>    
+    <div id="box">
+        <h2>Test-box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, officia.</p>
+    </div>
+    <br>
+    <button id="togglebtn">Toggle</button>
+    <button id="hidebtn">Hide</button>
+    <button id="showbtn">Show</button>
+
+    <script src="jquery-3.6.3.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#hidebtn').click(function(){
+                $('#box').hide();
+            });
+
+            $('#showbtn').click(function(){
+                $('#box').show();
+            });
+
+            // parameter slow and fast
+            $('#hidebtn').click(function(){
+                $('#box').hide("slow");   // you can also use fast as slow....
+            });
+
+            $('#showbtn').click(function(){
+                $('#box').show("slow");
+            });
+
+            // for second parameter time function
+
+            $('#hidebtn').click(function(){
+                $('#box').hide(3000);
+            });
+
+            $('#showbtn').click(function(){
+                $('#box').show(3000);
+            });
+
+            $('#hidebtn').click(function(){
+                $('#box').hide(3000,function(){
+                    alert("Now it is hidden...");
+                });
+            });
+                // for third parameter function is a optional.....
+            $('#showbtn').click(function(){
+                $('#box').show(3000,function(){
+                    alert("Now it is show...");
+                });
+            });
+
+            // toggle button... its used for both show and hide....
+            $('#togglebtn').click(function(){
+                $('#box').toggle(3000);
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        #box{
+            padding: a0px;
+            border: 1px solid lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <h1>JQuery CSS METHODS</h1>
+
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum dolor <span>sit amet consectetur adipisicing </span> elit. Fugiat, enim.</p>
+    </div>
+    <br><br>
+    <button id="stylebutton">Add Style</button>
+
+    <script src="jquery-3.6.3.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#stylebutton').click(function(){
+                $('#box').css({"background":"pink","color":"red","border":"1px dotted green"});
+            });
+        });
+    </script>
+</body>
+</html>

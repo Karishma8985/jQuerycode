@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: arial;
+        }
+        #box{
+            border: 1px solid lightslategray;
+            padding:10px;
+            background: lightcyan;
+        }
+    </style>
+</head>
+<body>
+    <h1>JQuery Effect: Hide and Show effect method</h1>
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, laudantium.</p>
+    </div>
+    <br><br>
+    <button id="togglebtn">Toggle</button>
+    <button id="hidebtn">hide</button>
+    <button id="showbtn">show</button>
+
+    <script src="jquery-3.6.3.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#hidebtn').click(function(){
+                $('#box').hide();
+            });
+            
+            $('#showbtn').click(function(){
+                $('#box').show();
+            });
+
+            $('#hidebtn').click(function(){
+                $('#box').hide("slow");         //parameter used slow
+            });
+            
+            $('#showbtn').click(function(){
+                $('#box').show("slow");
+            });
+
+            $('#hidebtn').click(function(){
+                $('#box').hide(3000);           // for parameter in second  (time function)
+            });
+
+            $('#showbtn').click(function(){
+                $('#box').show(3000);
+            });
+
+            // for third parameter is a optional
+
+            $('#hidebtn').click(function(){
+                $('#box').hide(2000,function(){
+                    alert("now It is hidden");
+                });
+            });
+
+            $('#showbtn').click(function(){
+                $('#box').show(3000,function(){
+                    alert("now it is Show");
+                });
+            });
+
+            $('#togglebtn').click(function(){
+                $('#box').toggle(3000);
+            });
+
+        });
+    </script>
+
+</body>
+</html>

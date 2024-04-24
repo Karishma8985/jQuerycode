@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: lavenderblush;
+            font-family: arial;
+        }
+        #box{
+            background: lightgoldenrodyellow;
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            border: 2px double red;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>JQuery Stop Method</h1>
+    <div id="box">Hello, how r you?</div>
+    <br>
+    <button id="animatebtn">Animation</button>
+    <button id="stopbtn">Stop</button>
+    <script src="jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $('#animatebtn').click(function(){
+                $('#box').animate({left:'350px'},3000);
+                $('#box').animate({top:'350px'},2000);
+            });
+
+            //  stop function for animation
+
+            $('#stopbtn').click(function(){
+                $('#box').stop();
+           });
+       
+           $('#stopbtn').click(function(){
+            $('#box').stop(true);
+       });
+        
+       $('#stopbtn').click(function(){
+        $('#box').stop(true,true);
+        });
+     });
+    </script>
+
+    
+</body>
+</html>

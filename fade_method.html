@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: arial;
+        }
+        #box{
+            background: lightgrey;
+            padding: 10px;
+            border: 2px solid lightsalmon;
+        }
+    </style>
+</head>
+<body>
+    <h1>JQuery FadeIn and FadeOut Method</h1>
+    <div id="box">
+        <h2>Text Box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, officia.</p>
+    </div>
+    <br>
+    <button id="fadeInbtn">fadeIn</button>
+    <button id="fadeOutbtn">fadeOut</button>
+    <button id="fadeTogglebtn">fadeToggle</button>
+
+    <script src="jquery-3.6.3.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            // like a hide method....
+            $('#fadeOutbtn').click(function(){
+            $('#box').fadeOut();
+            });
+            
+            $('#fadeOutbtn').click(function(){
+            $('#box').fadeOut("slow");      // you can change a slow to fast.....
+            });
+
+            $('#fadeOutbtn').click(function(){
+            $('#box').fadeOut(3000);      
+            });
+
+            $('#fadeInbtn').click(function(){
+            $('#box').fadeIn();
+            });
+
+            $('#fadeInbtn').click(function(){
+            $('#box').fadeIn("slow");
+            });
+
+            $('#fadeInbtn').click(function(){
+            $('#box').fadeIn(3000);
+            });
+
+            // call back function
+            $('#fadeOutbtn').click(function(){
+            $('#box').fadeOut(3000,function(){
+                alert("now it is hidden");
+                });
+            });
+            
+            $('#fadeInbtn').click(function(){
+                $('#box').fadeIn
+                (3000,function(){
+                    alert("now it is show");
+                    });
+                });
+
+            $('#fadeTogglebtn').click(function(){
+                $('#box').fadeToggle(3000,function(){
+                    alert("now it is hidden");
+                    alert("now it is shown....");
+                    });
+                });
+        });
+
+    </script>
+
+
+</body>
+</html>

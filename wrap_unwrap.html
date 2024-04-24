@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: arial;
+        }
+       
+        #box{
+            background: lightseagreen;
+            padding: 10px;
+            border: 1px solid darkolivegreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>JQuery wrap() and unwrap() Methods</h1>
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, iure!</p>
+    </div>
+    <br><br>
+
+    <button id="wrapbutton">Wrap</button>
+    <button id="unwrapbutton">Unwrap</button>
+
+    <script src="jquery-3.6.3.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#wrapbutton').click(function(){
+                $('#box p').wrap('<div> </div>');
+                $('#box p').wrap('<div id = "test"> </div>');
+                $('#box p').wrap('<h2> </h2>');
+                                                
+            });
+
+            $('#unwrapbutton').click(function(){
+                $('#box p').unwrap();
+            });
+        });
+    </script>
+ </body>
+</html>   
